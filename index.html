@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osman Store</title>
+  <meta name="description" content="Osman Store — küçük bir kampüs dükkanı. Defter, çanta ve günlük eşyalar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#urunler">
+      <span class="mark" aria-hidden="true">OS</span>
+      <span>
+        <strong>Osman Store</strong>
+        <small>Kampüs dükkanı</small>
+      </span>
+    </a>
+    <button class="cart-btn" id="open-cart" type="button">
+      Sepet
+      <span class="count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Modern alışverişin yeni adresi</p>
+      <h1>Bugün lazım olanlar, rafta.</h1>
+      <p class="lede">Defterden termosa, altı ürün. Sepete ekle, toplamı gör. Ödeme yok — bu bir demo vitrin.</p>
+    </section>
+
+    <section id="urunler" class="catalog">
+      <div class="filters" role="tablist" aria-label="Kategori">
+        <button class="chip is-on" type="button" data-filter="hepsi">Hepsi</button>
+        <button class="chip" type="button" data-filter="kirtasiye">Kırtasiye</button>
+        <button class="chip" type="button" data-filter="gunluk">Günlük</button>
+        <button class="chip" type="button" data-filter="teknoloji">Teknoloji</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Bu kategoride ürün yok.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Osman Store · demo vitrin · fiyatlar örnektir</p>
+  </footer>
+
+  <div class="shade" id="shade" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawer-title">
+    <div class="drawer-head">
+      <h2 id="drawer-title">Sepet</h2>
+      <button class="text-btn" id="close-cart" type="button">Kapat</button>
+    </div>
+    <ul class="lines" id="lines"></ul>
+    <p class="drawer-empty" id="drawer-empty">Sepet boş. Bir ürün ekle.</p>
+    <div class="drawer-foot">
+      <p class="total"><span>Toplam</span> <strong id="total">0 TL</strong></p>
+      <button class="buy" id="checkout" type="button">Siparişi not et</button>
+      <p class="note" id="note" hidden>Not alındı. Bu demo ödeme almaz; sepet temizlendi.</p>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
